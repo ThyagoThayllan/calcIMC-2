@@ -1,0 +1,200 @@
+:root {
+  --royalblue: #4169e1;
+  --blue: #0000ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: var(--blue);
+  min-height: 100vh;
+  color: #fff;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hide {
+  display: none !important;
+}
+
+.container {
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: var(--royalblue);
+  box-shadow: 0 0 5px black;
+  text-align: center;
+  min-width: 400px;
+  min-height: 400px;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+#calcContainer {
+  width: 100%;
+}
+
+#calcContainer h2 {
+  padding-bottom: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--blue);
+}
+
+#imcForm {
+  display: flex;
+  flex-flow: column;
+  gap: 0.5rem;
+}
+
+.formInputs {
+  display: flex;
+  flex-flow: column;
+  gap: 0.5rem;
+}
+
+.formControl label {
+  display: block;
+  text-align: start;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+.formControl input {
+  padding: 1rem;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid var(--blue);
+  outline: 0;
+  font-size: 1rem;
+}
+
+.formControl input::placeholder {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.actionControl {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.actionControl button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#calcButton {
+  background-color: darkgreen;
+  transition: 0.2s;
+}
+#calcButton:hover {
+  background-color: green;
+  transform: scale(105%);
+}
+
+#clear {
+  background-color: darkred;
+  transition: 0.2s;
+}
+#clear:hover {
+  background-color: red;
+  transform: scale(105%);
+}
+
+#resultContainer {
+  display: flex;
+  flex-flow: column;
+  margin: 0 auto;
+  gap: 1rem;
+  transition: all 0.4s;
+  width: 100%;
+  font-size: 1.25rem;
+}
+
+#backButton {
+  padding: 1rem;
+  width: 100px;
+  border: 1px solid var(--blue);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: goldenrod;
+  transition: 0.4s;
+  opacity: 0.9;
+  align-self: center;
+}
+#backButton:hover {
+  transform: scale(105%);
+  opacity: 1;
+}
+
+#imcNumber {
+  font-size: 2rem;
+}
+
+#imcInfo {
+  font-size: 1.25rem;
+  margin-top: -1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--blue);
+}
+
+#imcTable {
+  margin: 1rem 0;
+  font-size: 0.875rem;
+}
+
+.tableHeader {
+  font-weight: bold;
+  color: #ccc;
+}
+
+.tableHeader,
+.tableData {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--blue);
+}
+
+.tableHeader h4,
+.tableData p {
+    flex: 1;
+}
+
+.tableHeader h4:nth-child(3),
+.tableData p:nth-child(3) {
+    max-width: 80px;
+}
+
+.good {
+    color: #12db34;
+}
+.low {
+    color: #dbce12;
+}
+.medium {
+    color: #db6212;
+}
+.high {
+    color: #db1912;
+}
